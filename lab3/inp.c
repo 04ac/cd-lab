@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+int abc = 55555;
+int wbndue;
+
 int main() {
 	FILE* f = fopen("inp.c", "r");
 	FILE* fd = fopen("out.c", "w");

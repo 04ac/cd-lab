@@ -1,0 +1,23 @@
+/* AFTER LEFT FACTORING IDENTIFIER_LIST
+Program -> main(){ declarations statement-list } 
+declarations -> data-type identifier-list; declarations | E
+data-type -> int | char
+identifier-list -> id identifier-list1
+identifier-list1 -> E | , identifier-list | [number]identifier-list2
+identifier-list2 -> , identifier-list | E
+statement_list -> statement statement_list | E
+statement -> assign-stat; | decision_stat
+assign_stat -> id = expn
+expn -> simple-expn eprime 
+eprime -> relop simple-expn | E 
+simple-expn -> term seprime 
+seprime -> addop term seprime | E
+term -> factor tprime
+tprime -> mulop factor tprime | E
+factor -> id | num
+decision-stat -> if (expn) {statement_list} dprime 
+dprime -> else {statement_list} | E
+relop -> ==|!=|<=|>=|>|< 
+addop -> +|- 
+mulop -> *|/|%
+*/
